@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Corona Virus</title>
+  <title>COVID-19 Cases in Scotland</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="style.css" rel="stylesheet">
-  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="icon" type="image/png" href="./coronavirus.svg">
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,600&display=swap" rel="stylesheet">
 </head>
 
@@ -14,8 +14,12 @@
 
   <div id="main">
     <div id="data">
-      <h1>Corona Virus in Scotland</h1>
-      <p>NHS Guidelines on Corona can be found @ <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/">nhs.uk</a></p>
+      <h1>COVID-19 Cases in Scotland</h1>
+      <p>Updated 13th March 2020 @ 14:00(GMT) from <a href="https://www.gov.scot/coronavirus-covid-19/">gov.scot</a>.</p>
+
+      <p>You can find information, advice and updates on the
+        <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/">NHS website</a> and the <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019">WHO Website</a>.
+      </p>
 
       <section id="total-cases">
         <h2 id="total-cases-label">Total Cases: <span></span></h2>
@@ -26,8 +30,13 @@
         <h2 id="new-cases-label">New Cases per Day: <span></span></h2>
         <canvas id="new-cases-ctx"></canvas>
       </section>
-      <p><a href="https://www.gov.scot/coronavirus-covid-19/">Source (gov.scot)</a> Last updated: 13th March, 2020</p>
+
+      <section id="deaths">
+        <h2 id="deaths-label">Deaths: <span></span></h2>
+        <canvas id="deaths-ctx"></canvas>
+      </section>
     </div>
+
     <div id="map"></div>
   </div>
 

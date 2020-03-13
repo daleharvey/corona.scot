@@ -2,7 +2,6 @@
 
 const $ = document.querySelector.bind(document);
 
-//                                             7  8  9  10 11 12 13
 const CASES = {
   tayside: { label: "Tayside",         cases: [1, 0, 0, 0, 1, 1, 0]},
   ayrshire: { label: "Ayrshire",       cases: [1, 0, 0, 0, 2, 1, 0]},
@@ -20,6 +19,8 @@ const CASES = {
   western: { label: "Western Isles",   cases: [0, 0, 0, 0, 0, 0, 0]},
 };
 
+const DEATHS = [0, 0, 0, 0, 0, 0, 1];
+
 const HEAT_MAP_COLORS = [
   "#F6412D",  "#FF5607", "#FF9800", "#FFC100", "#FFEC19"
 ];
@@ -29,7 +30,6 @@ const HEAT_MAP_COLORS = [
   await colourMap();
   await drawGraphs();
 })();
-
 
 async function loadMap() {
   let req = await fetch("scotland_health_boards.svg");
@@ -76,15 +76,30 @@ async function drawGraphs() {
 
   let labels = ["7th", "8th", "9th", "10th", "11th", "12th", "13th"];
   let options = {
-    scales: { yAxes: [{ ticks: { beginAtZero: true } }] }
+    legend: { display: false },
+    scales: {
+      xAxes: [{
+        scaleLabel: {
+          display: true,
+          labelString: "March"
+        },
+      }],
+      yAxes: [{
+        ticks: { beginAtZero: true }
+      }]
+    }
   };
 
-Chart.defaults.global.legend.display = false;
+  let totalOptions = JSON.parse(JSON.stringify(options));
+  totalOptions.scales.yAxes = [{
+    ticks: { beginAtZero: true, stepSize: 20 },
+  }];
+
   $("#total-cases-label span").textContent =
     total_cases[total_cases.length - 1];
   new Chart($("#total-cases-ctx").getContext('2d'), {
     type: 'bar',
-    options,
+    options: totalOptions,
     data: {
       labels,
       datasets: [{
@@ -110,4 +125,23 @@ Chart.defaults.global.legend.display = false;
     },
   });
 
+  let deathsOptions = JSON.parse(JSON.stringify(options));
+  deathsOptions.scales.yAxes = [{
+    ticks: { beginAtZero: true, stepSize: 1 },
+  }];
+
+  $("#deaths-label span").textContent =
+    DEATHS.reduce((a, b) => a + b, 0);
+  new Chart($("#deaths-ctx").getContext('2d'), {
+    type: 'bar',
+    options: deathsOptions,
+    data: {
+      labels,
+      datasets: [{
+        label: "Deaths",
+        data: DEATHS,
+        backgroundColor: 'rgba(251, 41, 41, 1)'
+      }]
+    },
+  });
 }
