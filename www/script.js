@@ -2,22 +2,22 @@
 
 const $ = document.querySelector.bind(document);
 
-//                                             8  9  10 11 12
+//                                             7  8  9  10 11 12 13
 const CASES = {
-  tayside: { label: "Tayside",         cases: [1, 0, 0, 0, 1, 2]},
-  ayrshire: { label: "Ayrshire",       cases: [1, 0, 0, 0, 2, 1]},
-  forth: { label: "Forth Valley",      cases: [2, 0, 0, 0, 0, 4]},
-  glasgow: { label: "Glasgow",         cases: [1, 1, 1, 0, 2, 5]},
-  grampian: { label: "Grampian",       cases: [3, 1, 0, 0, 2, 1]},
-  fife: { label: "Fife",               cases: [2, 0, 0, 0, 0, 1]},
-  lothian: { label: "Lothian",         cases: [1, 1, 1, 2, 3, 3]},
-  lanarkshire: { label: "Lanarkshire", cases: [0, 2, 0, 1, 1, 3]},
-  borders: { label: "Borders",         cases: [0, 0, 0, 0, 2, 0]},
-  dumfries: { label: "Dumfries",       cases: [0, 0, 0, 0, 0, 0]},
-  highland: { label: "Highlands",      cases: [0, 0, 0, 0, 0, 0]},
-  orkney: { label: "Orkney",           cases: [0, 0, 0, 0, 0, 0]},
-  shetland: { label: "Sheltand",       cases: [0, 0, 0, 2, 0, 4]},
-  western: { label: "Western Isles",   cases: [0, 0, 0, 0, 0, 0]},
+  tayside: { label: "Tayside",         cases: [1, 0, 0, 0, 1, 1, 0]},
+  ayrshire: { label: "Ayrshire",       cases: [1, 0, 0, 0, 2, 1, 0]},
+  forth: { label: "Forth Valley",      cases: [2, 0, 0, 0, 0, 4, 0]},
+  glasgow: { label: "Glasgow",         cases: [1, 1, 1, 0, 2, 5, 11]},
+  grampian: { label: "Grampian",       cases: [3, 1, 0, 0, 2, 1, 4]},
+  fife: { label: "Fife",               cases: [2, 0, 0, 0, 0, 1, 1]},
+  lothian: { label: "Lothian",         cases: [1, 1, 1, 2, 3, 3, 9]},
+  lanarkshire: { label: "Lanarkshire", cases: [0, 2, 0, 1, 1, 3, 0]},
+  borders: { label: "Borders",         cases: [0, 0, 0, 0, 2, 0, 1]},
+  dumfries: { label: "Dumfries",       cases: [0, 0, 0, 0, 0, 0, 0]},
+  highland: { label: "Highlands",      cases: [0, 0, 0, 0, 0, 0, 0]},
+  orkney: { label: "Orkney",           cases: [0, 0, 0, 0, 0, 0, 0]},
+  shetland: { label: "Sheltand",       cases: [0, 0, 0, 2, 0, 4, 0]},
+  western: { label: "Western Isles",   cases: [0, 0, 0, 0, 0, 0, 0]},
 };
 
 const HEAT_MAP_COLORS = [
@@ -74,7 +74,7 @@ async function drawGraphs() {
     return acc;
   }, []);
 
-  let labels = ['7th', '8th', '9th', '10th', '11th', '12th'];
+  let labels = ["7th", "8th", "9th", "10th", "11th", "12th", "13th"];
   let options = {
     scales: { yAxes: [{ ticks: { beginAtZero: true } }] }
   };
