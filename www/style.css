@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: rgb(25, 29, 31);
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+body {
+  padding: 1em;
+}
+
+a {
+  color: rgba(251, 41, 41, 1);
+}
+
+#main {
+  display: flex;
+  height: 100%;
+}
+
+#map {
+  height: 100%;
+}
+
+svg {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+path, polygon {
+  fill: #999;
+  opacity: .7;
+}
+
+path:hover, polygon:hover {
+  opacity: .9;
+}
+
+h2 {
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+
+#data {
+  flex-grow: 2;
+}
+
+rect, text {
+  pointer-events: none;
+}
+
+section {
+  padding: 1em;
+  margin: 1em;
+  background: #111;
+  }
