@@ -5,7 +5,7 @@ const $ = document.querySelector.bind(document);
 const CASES = {
   tayside: { label: "Tayside",         cases: [1, 0, 0, 0, 1, 1, 0, 8, 4, 2]},
   ayrshire: { label: "Ayrshire",       cases: [1, 0, 0, 0, 2, 1, 0, 2, 0, 1]},
-  forth: { label: "Forth Valley",      cases: [2, 0, 0, 0, 0, 4, 0, 0, 4,10]},
+  forth: { label: "Forth Valley",      cases: [2, 0, 0, 0, 0, 4, 0, 0, 4, 0]},
   glasgow: { label: "Glasgow",         cases: [1, 1, 1, 0, 2, 5, 11,10,8, 5]},
   grampian: { label: "Grampian",       cases: [3, 1, 0, 0, 2, 1, 2, 0, 3, 0]},
   fife: { label: "Fife",               cases: [2, 0, 0, 0, 0, 1, 1, 2, 1, 0]},
