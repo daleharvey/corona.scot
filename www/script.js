@@ -5,67 +5,67 @@ const $ = document.querySelector.bind(document);
 const CASES = {
   ayrshire: {
     label: "Ayrshire",
-    cases: [1, 0, 0, 0, 2, 1, 0, 2, 0, 0, 0, 3, 3, 4]
+    cases: [1, 0, 0, 0, 2, 1, 0, 2, 0, 0, 0, 3, 3, 4, 5]
   },
   borders: {
     label: "Borders",
-    cases: [0, 0, 0, 0, 2, 0, 1, 2, 2, 0, 0, 0, 1, 1]
+    cases: [0, 0, 0, 0, 2, 0, 1, 2, 2, 0, 0, 0, 1, 1, 1]
   },
   dumfries: {
     label: "Dumfries",
-    cases: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 2, 4]
+    cases: [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 3, 2, 4, 3]
   },
   fife: {
     label: "Fife",
-    cases: [2, 0, 0, 0, 0, 1, 1, 2, 1, 0, 0, 1, 1, 3]
+    cases: [2, 0, 0, 0, 0, 1, 1, 2, 1, 0, 0, 1, 1, 3, 1]
   },
   forth: {
     label: "Forth Valley",
-    cases: [2, 0, 0, 0, 0, 4, 0, 0, 4, 0, 2, 3, 2, 6]
+    cases: [2, 0, 0, 0, 0, 4, 0, 0, 4, 0, 2, 3, 2, 6, 4]
   },
   grampian: {
     label: "Grampian",
-    cases: [3, 1, 0, 0, 2, 1, 2, 0, 3, 0, 6, 0, 0, 1]
+    cases: [3, 1, 0, 0, 2, 1, 2, 0, 3, 0, 6, 0, 0, 1, 1]
   },
   glasgow: {
     label: "Glasgow",
-    cases: [1, 1, 1, 0, 2, 5, 11,10,8, 5, 5, 8,14,20]
+    cases: [1, 1, 1, 0, 2, 5, 11,10,8, 5, 5, 8,14,20,19]
   },
   highland: {
     label: "Highlands",
-    cases: [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 3, 0, 1, 0]
+    cases: [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 3, 0, 1, 0, 2]
   },
   lanarkshire: {
     label: "Lanarkshire",
-    cases: [0, 2, 0, 1, 1, 3, 0, 3, 6, 4, 1, 4, 8, 8]
+    cases: [0, 2, 0, 1, 1, 3, 0, 3, 6, 4, 1, 4, 8, 8, 8]
   },
   lothian: {
     label: "Lothian",
-    cases: [1, 1, 1, 2, 3, 3, 9, 5, 3, 1, 1, 3, 2, 5],
+    cases: [1, 1, 1, 2, 3, 3, 9, 5, 3, 1, 1, 3, 2, 5, 4],
   },
   shetland: {
     label: "Shetland",
-    cases: [0, 0, 0, 2, 0, 4, 0, 5, 0, 0, 0, 5, 8, 0]
+    cases: [0, 0, 0, 2, 0, 4, 0, 5, 0, 0, 0, 5, 8, 0, 0]
   },
   tayside: {
     label: "Tayside",
-    cases: [1, 0, 0, 0, 1, 1, 0, 8, 4, 2, 3, 4, 3, 4]
+    cases: [1, 0, 0, 0, 1, 1, 0, 8, 4, 2, 3, 4, 3, 4, 3]
   },
   orkney: {
     label: "Orkney",
-    cases: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    cases: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   },
   western: {
     label: "Western Isles",
-    cases: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    cases: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   },
 };
 
-const DEATHS = [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 0];
+const DEATHS = [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 3, 0, 1];
 
 let labels = [
   "7th", "8th", "9th", "10th", "11th", "12th",
-  "13th", "14th", "15th", "16th", "17th", "18th", "19th", "20th"
+  "13th", "14th", "15th", "16th", "17th", "18th", "19th", "20th", "21st"
 ];
 
 const HEAT_MAP_COLORS = [
