@@ -29,7 +29,7 @@ const CASES = {
   },
   glasgow: {
     label: "Glasgow",
-    cases: [1, 1, 1, 0, 2, 5, 11,10,8, 5, 5, 8,14,20,19,20,22,21]
+    cases: [1, 1, 1, 0, 2, 5, 11,10,8, 5, 5, 8,14,20,19,20,22,31]
   },
   highland: {
     label: "Highlands",
